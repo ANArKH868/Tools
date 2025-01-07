@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Csv文件名+后缀s : ScriptableObject
+public class 一级类名+后缀s : ScriptableObject
 {
     /// <summary>
     /// 根据ID获取list所在的index标记位
@@ -24,7 +24,7 @@ public class Csv文件名+后缀s : ScriptableObject
 }
 
 [System.Serializable]
-public class 自定义一级类
+public class 自定义一级类（与csv同名）
 {
 	//公开 字段类型 字段名（与Excel写的一致）
     public int id;
