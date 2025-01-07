@@ -1,40 +1,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ÓëCsvÎÄ¼şÃûÒ»ÖÂ : ScriptableObject
+public class Csvæ–‡ä»¶å+åç¼€s : ScriptableObject
 {
     /// <summary>
-    /// ¸ù¾İID»ñÈ¡listËùÔÚµÄindex±ê¼ÇÎ»
+    /// æ ¹æ®IDè·å–listæ‰€åœ¨çš„indexæ ‡è®°ä½
     /// </summary>
     public Dictionary<int, int> idStorageDic = new Dictionary<int, int>();
-    public List<×Ô¶¨ÒåÒ»¼¶Àà> Ò»¼¶List = new List<×Ô¶¨ÒåÒ»¼¶Àà>();
+    public List<è‡ªå®šä¹‰ä¸€çº§ç±»> ä¸€çº§List = new List<è‡ªå®šä¹‰ä¸€çº§ç±»>();
 
-    public void AddList(int id, ×Ô¶¨ÒåÒ»¼¶Àà data)
+    public void AddList(int id, è‡ªå®šä¹‰ä¸€çº§ç±» data)
     {
-        data.XXX = new();  // ÎŞ¶ş¼¶·Ö×éºöÂÔ´ËĞĞ´úÂë
-        Ò»¼¶List.Add(data);
-        idStorageDic.Add(id, Ò»¼¶List.Count - 1);
+        data.XXX = new();  // æ— äºŒçº§åˆ†ç»„å¿½ç•¥æ­¤è¡Œä»£ç 
+        ä¸€çº§List.Add(data);
+        idStorageDic.Add(id, ä¸€çº§List.Count - 1);
     }
 
-    // ÎŞ¶ş¼¶·Ö×éºöÂÔ´Ë·½·¨
-    public void SecondAddList(int id, ¶ş¼¶·Ö×éÀà secData)
+    // æ— äºŒçº§åˆ†ç»„å¿½ç•¥æ­¤æ–¹æ³•
+    public void SecondAddList(int id, äºŒçº§åˆ†ç»„ç±» secData)
     {
-        Ò»¼¶List[idStorageDic[id]].XXX.Add(secData);
+        ä¸€çº§List[idStorageDic[id]].XXX.Add(secData);
     }
 }
 
 [System.Serializable]
-public class ×Ô¶¨ÒåÒ»¼¶Àà
+public class è‡ªå®šä¹‰ä¸€çº§ç±»
 {
-	//¹«¿ª ×Ö¶ÎÀàĞÍ ×Ö¶ÎÃû£¨ÓëExcelĞ´µÄÒ»ÖÂ£©
+	//å…¬å¼€ å­—æ®µç±»å‹ å­—æ®µåï¼ˆä¸Excelå†™çš„ä¸€è‡´ï¼‰
     public int id;
-    public List<¶ş¼¶·Ö×éÀà> XXX;
+    public List<äºŒçº§åˆ†ç»„ç±»> XXX;
 }
 
-// ´æÔÚ¶ş¼¶·Ö×éÊ±Ìí¼Ó¸ÃÀà£¨ÀàÃûÓëExcel¶ş¼¶·Ö×éÃûÒ»ÖÂ£©
+// å­˜åœ¨äºŒçº§åˆ†ç»„æ—¶æ·»åŠ è¯¥ç±»ï¼ˆç±»åä¸ExceläºŒçº§åˆ†ç»„åä¸€è‡´ï¼‰
 [System.Serializable]
-public class ¶ş¼¶·Ö×éÀà
+public class äºŒçº§åˆ†ç»„ç±»
 {
-    //¹«¿ª ×Ö¶ÎÀàĞÍ ×Ö¶ÎÃû£¨ÓëExcelĞ´µÄÒ»ÖÂ£©
+    //å…¬å¼€ å­—æ®µç±»å‹ å­—æ®µåï¼ˆä¸Excelå†™çš„ä¸€è‡´ï¼‰
     public int value;
 }
